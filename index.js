@@ -5,7 +5,7 @@ const mysql=require("mysql");
 const cors=require("cors");
 // 2.创建连接池
 var pool=mysql.createPool({
-    host:'127.0.0.1',
+    host:'',
     user:"root",
     password:"",
     database:"hmz",
