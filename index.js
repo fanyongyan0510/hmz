@@ -13,10 +13,6 @@ var pool=mysql.createPool({
 // 3创建express对象
 var server=express();
 // 3.1配置允许访问列
-server.use(cors({
-    origin:["http://127.0.0.1:8098","http://localhost:8098"],
-    credentials:true
-}))
 // 3.11引用session
 const session=require("express-session");
 // 3.11配置session信息
@@ -37,7 +33,7 @@ server.use(bodyParser.urlencoded(
     {extended:false}
 ))
 // 4为express对象绑定监听端口
-server.listen(1022);
+server.listen(5050);
 
 //1.检索用户 
 server.get('/retrieval',(req,res)=>{

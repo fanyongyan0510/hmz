@@ -2,10 +2,10 @@
   "name": "hmz.app",
   "version": "1.0.0",
   "description": "hmz",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "hmz",
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "author": "hmz",
   "license": "MIT",
