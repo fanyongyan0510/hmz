@@ -5,10 +5,11 @@ const mysql=require("mysql");
 const cors=require("cors");
 // 2.创建连接池
 var pool=mysql.createPool({
-    host:'',
-    user:"root",
-    password:"",
-    database:"hmz",
+    host     : process.env.MYSQL_HOST,
+    port     : process.env.MYSQL_PORT,
+    user     : process.env.ACCESSKEY,
+    password : process.env.SECRETKEY,
+    database : 'app_' + process.env.APPNAME
 })
 // 3创建express对象
 var server=express();
