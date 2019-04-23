@@ -58,7 +58,7 @@ server.post("/register",(req,res)=>{
     var sql='select uid from hmz_user where phone=?';
     pool.query(sql,[phone],(err,result)=>{
         if(err) throw err;
-        if(result.length<0){ 
+        if(result.length<=0){ 
             var sql="insert into hmz_user values(null,?,?,null,null,null)";
             pool.query(sql,[phone,upwd],(err,result)=>{
                 if(err) throw err;
